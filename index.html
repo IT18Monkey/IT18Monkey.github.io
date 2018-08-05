@@ -335,6 +335,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2018/08/05/java泛型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拔剑少年">
+      <meta itemprop="description" content="人生没有白走的路，每一步都算数。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拔剑少年的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/05/java泛型/" itemprop="url">
+                  java泛型（Generics）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-05 23:51:21 / 修改时间：23:53:11" itemprop="dateCreated datePublished" datetime="2018-08-05T23:51:21+08:00">2018-08-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java基础/" itemprop="url" rel="index"><span itemprop="name">java基础</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/05/java泛型/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/05/java泛型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+作者：lkd_whh博客地址：拔剑少年转载请注明出处
+
+泛型的好处
+编译时期的强类型检查。有利于提早发现问题，解决问题。
+
+不用再使用类型强转。
+
+能够利用泛型编写简单易读的通用代码。
+
+
+####泛型的使用
+
+泛型通常命名规则
+
+E - Element
+
+K - Key
+
+N - Number
+
+T - Type
+
+V - Value
+
+S,U,V 等等。- 第二，第三，第四类型。
+
+
+
+
+
+泛型类的定义和使用。
+以最常用的Arraylist为例，我们看下它的定义和使用。当我实例化时在&lt;&gt;中传入的类型为Integer时，集合中就无法再放入其他类型的元素了，从集合中取得元素时也不
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/05/java泛型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2018/08/05/Java新特性总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,7 +589,7 @@
                 
               
 
-              <time title="创建时间：2018-08-05 14:31:23 / 修改时间：23:18:26" itemprop="dateCreated datePublished" datetime="2018-08-05T14:31:23+08:00">2018-08-05</time>
+              <time title="创建时间：2018-08-05 14:31:23 / 修改时间：23:51:43" itemprop="dateCreated datePublished" datetime="2018-08-05T14:31:23+08:00">2018-08-05</time>
             
 
             
@@ -452,15 +660,18 @@
         
           
           
-作者：lkd_whh
-转载请注明出处
+作者：lkd_whh博客地址：拔剑少年转载请注明出处
 
 java5
 泛型 (Generics)
 1List&lt;Integer&gt; list=new ArrayList&lt;Integer&gt;();
 
 增强循环（Enhanced for Loop）
-1234int[] array = &#123;1,
+1234int[] array = &#123;1, 2, 3, 4, 5&#125;;for (int i : array) &#123;   System.out.println(i);&#125;
+
+自动封箱拆箱(Autoboxing/Unboxing )。八大基本类型和它们的包装类能够自动的相互转换。
+
+枚举(Typesafe
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -548,7 +759,7 @@ java5
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -582,7 +793,9 @@ java5
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
