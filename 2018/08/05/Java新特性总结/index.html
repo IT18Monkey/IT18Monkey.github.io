@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="作者：lkd_whh博客地址：拔剑少年转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 1234int[] array = &amp;#123;1, 2, 3, 4, 5&amp;#125;;for (int i : array) &amp;#12">
+  <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
 <meta name="keywords" content="jdk,java新特性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 5，6，7，8，9，10新特性吐血总结">
 <meta property="og:url" content="http://IT18Monkey.github.io/2018/08/05/Java新特性总结/index.html">
 <meta property="og:site_name" content="拔剑少年的博客">
-<meta property="og:description" content="作者：lkd_whh博客地址：拔剑少年转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 1234int[] array = &amp;#123;1, 2, 3, 4, 5&amp;#125;;for (int i : array) &amp;#12">
+<meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-07T15:26:29.734Z">
+<meta property="og:updated_time" content="2018-08-08T13:28:37.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 5，6，7，8，9，10新特性吐血总结">
-<meta name="twitter:description" content="作者：lkd_whh博客地址：拔剑少年转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 1234int[] array = &amp;#123;1, 2, 3, 4, 5&amp;#125;;for (int i : array) &amp;#12">
+<meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
 
 
 
@@ -405,7 +405,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-07 23:26:29" itemprop="dateModified" datetime="2018-08-07T23:26:29+08:00">2018-08-07</time>
+                <time title="修改时间：2018-08-08 21:28:37" itemprop="dateModified" datetime="2018-08-08T21:28:37+08:00">2018-08-08</time>
               
             
           </span>
@@ -469,7 +469,8 @@
 
       
         <blockquote>
-<p>作者：<a href="https://www.jianshu.com/u/dad4d9675892" target="_blank" rel="noopener">lkd_whh</a><br>博客地址：<a href="https://it18monkey.github.io">拔剑少年</a><br>转载请注明出处</p>
+<p>作者：拔剑少年</p>
+<p>简书地址：<a href="https://www.jianshu.com/u/dad4d9675892" target="_blank" rel="noopener">https://www.jianshu.com/u/dad4d9675892</a><br>博客地址：<a href="https://it18monkey.github.io">https://it18monkey.github.io</a><br>转载请注明出处</p>
 </blockquote>
 <h4 id="java5"><a href="#java5" class="headerlink" title="java5"></a>java5</h4><ol>
 <li><p>泛型 (Generics)</p>
@@ -497,9 +498,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注释注解的注解又叫做元注解</span></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotations &#123;</span><br><span class="line">    <span class="comment">//注解内可以添加方法，也可以不添加</span></span><br><span class="line">    <span class="comment">//注解方法的返回值只能是基本类型，String，Class类,枚举,注解,可以有默认值。</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">id</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">String <span class="title">name</span><span class="params">()</span> <span class="keyword">default</span> "whh"</span>;</span><br><span class="line">    <span class="function">Class <span class="title">classType</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">TestEnum <span class="title">enumType</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>新的线程模型和并发库（<code>java.util.concurrent</code>)。</p>
-<h4 id="java6"><a href="#java6" class="headerlink" title="java6"></a>java6</h4></li>
-<li><p>集合框架增强。</p>
 </li>
+</ol>
+<h4 id="java6"><a href="#java6" class="headerlink" title="java6"></a>java6</h4><ol>
+<li>集合框架增强。</li>
 </ol>
 <ul>
 <li>为了更好的支持双向访问集合。添加了许多新的类和接口。</li>
@@ -526,9 +528,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment">   * 声明在try括号中的对象称为资源，在方法执行完毕后会被自动关闭,相对与之前必须在finally关闭资源，这一特性大大提高了代码的简洁性。</span></span><br><span class="line"><span class="comment">   * 所有实现java.lang.AutoCloseable接口的类都作为资源被自动关闭。</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="keyword">try</span> (BufferedReader reader=<span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">"d:1.txt"</span>)))&#123;</span><br><span class="line">    <span class="keyword">return</span> reader.readLine();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>单个catch中捕获多个异常类型（用<code>|</code> 分割）并通过改进的类型检查重新抛出异常。</p>
-<h4 id="java8"><a href="#java8" class="headerlink" title="java8"></a>java8</h4></li>
-<li><p>lambada表达式(Lambda Expressions)。Lambda允许把函数作为一个方法的参数（函数作为参数传递进方法中)。</p>
 </li>
+</ol>
+<h4 id="java8"><a href="#java8" class="headerlink" title="java8"></a>java8</h4><ol>
+<li>lambada表达式(Lambda Expressions)。Lambda允许把函数作为一个方法的参数（函数作为参数传递进方法中)。</li>
 <li>方法引用（Method references）。方法引用提供了非常有用的语法，可以直接引用已有Java类或对象（实例）的方法或构造器。与lambda联合使用，可以使语言的构造更紧凑简洁，减少冗余代码。</li>
 <li>默认方法（Default methods）。默认方法允许将新功能添加到库的接口中，并确保兼容实现老版本接口的旧有代码。</li>
 <li>重复注解（Repeating Annotations）。重复注解提供了在同一声明或类型中多次应用相同注解类型的能力。</li>
@@ -551,14 +554,14 @@
 <li>新增了<code>java.util.concurrent.locks.StampedLock</code>类，为控制读/写访问提供了一个基于性能的锁，且有三种模式可供选择。</li>
 </ul>
 </li>
-<li><p>HotSpot</p>
-<ul>
+<li>HotSpot<ul>
 <li>删除了 永久代（PermGen）.</li>
 <li>方法调用的字节码指令支持默认方法。</li>
 </ul>
-<h4 id="java9"><a href="#java9" class="headerlink" title="java9"></a>java9</h4></li>
-<li><p>java模块系统 （Java Platform Module System）。</p>
 </li>
+</ol>
+<h4 id="java9"><a href="#java9" class="headerlink" title="java9"></a>java9</h4><ol>
+<li>java模块系统 （Java Platform Module System）。</li>
 <li>新的版本号格式。<code>$MAJOR.$MINOR.$SECURITY.$PATCH</code></li>
 <li>java shell，交互式命令行控制台。</li>
 <li>在<code>private instance methods</code>方法上可以使用<code>@SafeVarargs</code>注解。</li>
@@ -579,8 +582,9 @@
 </ul>
 </li>
 <li>properties文件支持<code>UTF-8</code>编码,之前只支持<code>ISO-8859-1</code>。</li>
-<li><p>支持<code>Unicode 8.0</code>，在JDK8中是<code>Unicode 6.2</code>。</p>
-<h4 id="java10"><a href="#java10" class="headerlink" title="java10"></a>java10</h4></li>
+<li>支持<code>Unicode 8.0</code>，在JDK8中是<code>Unicode 6.2</code>。</li>
+</ol>
+<h4 id="java10"><a href="#java10" class="headerlink" title="java10"></a>java10</h4><ol>
 <li><p>局部变量类型推断（Local-Variable Type Inference）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//之前的代码格式</span></span><br><span class="line">URL url = <span class="keyword">new</span> URL(<span class="string">"http://www.oracle.com/"</span>); </span><br><span class="line">URLConnection conn = url.openConnection(); </span><br><span class="line">Reader reader = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">    <span class="keyword">new</span> InputStreamReader(conn.getInputStream()))</span><br><span class="line"><span class="comment">//java10中用var来声明变量</span></span><br><span class="line">var url = <span class="keyword">new</span> URL(<span class="string">"http://www.oracle.com/"</span>); </span><br><span class="line">var conn = url.openConnection(); </span><br><span class="line">var reader = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">    <span class="keyword">new</span> InputStreamReader(conn.getInputStream()));</span><br></pre></td></tr></table></figure>
 <p><code>var</code>是一个保留类型名称，而不是关键字。所以之前使用<code>var</code>作为变量、方法名、包名的都没问题，但是如果作为类或接口名，那么这个类和接口就必须重命名了。</p>
@@ -591,9 +595,9 @@
 <li>传统for循环中声明的索引变量。</li>
 <li>Try-with-resources 变量。​</li>
 </ul>
-<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4></li>
+</li>
 </ol>
-<ul>
+<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><ul>
 <li><a href="http://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html" target="_blank" rel="noopener">JDK Release Notes</a></li>
 <li><a href="http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html" target="_blank" rel="noopener">What’s New in JDK 8</a></li>
 <li><a href="https://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-C23AFD78-C777-460B-8ACE-58BE5EA681F6" target="_blank" rel="noopener">What’s New in JDK 9</a></li>
@@ -755,7 +759,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -770,7 +774,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -791,7 +797,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

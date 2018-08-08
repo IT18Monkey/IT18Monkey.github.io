@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  泛型的好处 编译时期的强类型检查。有利于提早发现问题，解决问题。  不用再使用类型强转。  能够利用泛型编写简单易读的通用代码。   泛型的使用 泛型通常命名规则  E - Element  K - Key  N">
-<meta name="keywords" content="泛型,Generics">
+  <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  ​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Exp">
+<meta name="keywords" content="MySQL,Explain,sql优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java泛型（Generics）">
-<meta property="og:url" content="http://IT18Monkey.github.io/2018/08/05/java泛型/index.html">
+<meta property="og:title" content="MySQL优化-EXPLAIN（mysql版本8.0）">
+<meta property="og:url" content="http://IT18Monkey.github.io/2018/08/08/MySQL优化-EXPLAIN/index.html">
 <meta property="og:site_name" content="拔剑少年的博客">
-<meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  泛型的好处 编译时期的强类型检查。有利于提早发现问题，解决问题。  不用再使用类型强转。  能够利用泛型编写简单易读的通用代码。   泛型的使用 泛型通常命名规则  E - Element  K - Key  N">
+<meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  ​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Exp">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-08T13:28:42.870Z">
+<meta property="og:updated_time" content="2018-08-08T13:40:55.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java泛型（Generics）">
-<meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  泛型的好处 编译时期的强类型检查。有利于提早发现问题，解决问题。  不用再使用类型强转。  能够利用泛型编写简单易读的通用代码。   泛型的使用 泛型通常命名规则  E - Element  K - Key  N">
+<meta name="twitter:title" content="MySQL优化-EXPLAIN（mysql版本8.0）">
+<meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  ​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Exp">
 
 
 
 
 
 
-  <link rel="canonical" href="http://IT18Monkey.github.io/2018/08/05/java泛型/"/>
+  <link rel="canonical" href="http://IT18Monkey.github.io/2018/08/08/MySQL优化-EXPLAIN/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>java泛型（Generics） | 拔剑少年的博客</title>
+  <title>MySQL优化-EXPLAIN（mysql版本8.0） | 拔剑少年的博客</title>
   
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2018/08/05/java泛型/">
+    <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2018/08/08/MySQL优化-EXPLAIN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="拔剑少年">
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java泛型（Generics）
+          <h1 class="post-title" itemprop="name headline">MySQL优化-EXPLAIN（mysql版本8.0）
               
             
           </h1>
@@ -388,24 +388,12 @@
                 
               
 
-              <time title="创建时间：2018-08-05 23:51:21" itemprop="dateCreated datePublished" datetime="2018-08-05T23:51:21+08:00">2018-08-05</time>
+              <time title="创建时间：2018-08-08 21:20:22 / 修改时间：21:40:55" itemprop="dateCreated datePublished" datetime="2018-08-08T21:20:22+08:00">2018-08-08</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-08-08 21:28:42" itemprop="dateModified" datetime="2018-08-08T21:28:42+08:00">2018-08-08</time>
               
             
           </span>
@@ -422,7 +410,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java基础/" itemprop="url" rel="index"><span itemprop="name">java基础</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -437,10 +425,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/05/java泛型/#comments" itemprop="discussionUrl">
+                <a href="/2018/08/08/MySQL优化-EXPLAIN/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/05/java泛型/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/08/08/MySQL优化-EXPLAIN/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -472,85 +460,291 @@
 <p>作者：拔剑少年</p>
 <p>简书地址：<a href="https://www.jianshu.com/u/dad4d9675892" target="_blank" rel="noopener">https://www.jianshu.com/u/dad4d9675892</a><br>博客地址：<a href="https://it18monkey.github.io">https://it18monkey.github.io</a><br>转载请注明出处</p>
 </blockquote>
-<h4 id="泛型的好处"><a href="#泛型的好处" class="headerlink" title="泛型的好处"></a>泛型的好处</h4><ol>
-<li><p>编译时期的强类型检查。有利于提早发现问题，解决问题。</p>
-</li>
-<li><p>不用再使用类型强转。</p>
-</li>
-<li><p>能够利用泛型编写简单易读的通用代码。</p>
-</li>
-</ol>
-<h4 id="泛型的使用"><a href="#泛型的使用" class="headerlink" title="泛型的使用"></a>泛型的使用</h4><ol>
-<li><p>泛型通常命名规则</p>
-<ul>
-<li><p>E - Element</p>
-</li>
-<li><p>K - Key</p>
-</li>
-<li><p>N - Number</p>
-</li>
-<li><p>T - Type</p>
-</li>
-<li><p>V - Value</p>
-</li>
-<li><p>S,U,V 等等。- 第二，第三，第四类型。</p>
-</li>
-</ul>
+<p>​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Explain命令。</p>
+<p>​    EXPLAIN为SELECT语句中使用的每个table返回一行信息。它以MySQL在处理语句时的读取顺序列出所有的table。MySQL使用嵌套循环的方式解决所有的表连接（join）。这意味着MySQL从第一个table读取一行，然后在第二个table、第三个table中查找匹配的行，以此类推。当所有的table都被处理过时，MySQL会输出所选的列并在所有的table中进行反向跟踪，直到找到一个有更多匹配行的table。从该table中读取下一行，并继续处理下一个table。</p>
+<p>​    理解Explain输出的信息含义对SQL语句的优化有着至关重要的作用。 下面让我们详细解析下Explain命令输出的各字段的含义。</p>
+<p>Explain 输出的列：</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>JSON 名(FORMAT=JSON)</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#explain_id">id</a></td>
+<td>select_id</td>
+<td>SELECT 语句的id</td>
+</tr>
+<tr>
+<td><a href="#explain_select_type">select_type</a></td>
+<td>无</td>
+<td>SELETE 语句的类型</td>
+</tr>
+<tr>
+<td><a href="#explain_table">table</a></td>
+<td>table_name</td>
+<td>表名</td>
+</tr>
+<tr>
+<td><a href="#explain_partitions">partitions</a></td>
+<td>partitions</td>
+<td>分区</td>
+</tr>
+<tr>
+<td><a href="#explain_type">type</a></td>
+<td>access_type</td>
+<td>join 类型</td>
+</tr>
+<tr>
+<td><a href="#explain_possible_keys">possible_keys</a></td>
+<td>possible_keys</td>
+<td>可供选择使用的索引</td>
+</tr>
+<tr>
+<td><a href="#explain_key">key</a></td>
+<td>key</td>
+<td>实际使用的索引</td>
+</tr>
+<tr>
+<td><a href="#explain_key_len">key_len</a></td>
+<td>key_length</td>
+<td>实际使用索引的长度</td>
+</tr>
+<tr>
+<td><a href="#explain_ref">ref</a></td>
+<td>ref</td>
+<td>与索引比较的列</td>
+</tr>
+<tr>
+<td><a href="#explain_rows">rows</a></td>
+<td>rows</td>
+<td>预估检测行数</td>
+</tr>
+<tr>
+<td><a href="#explain_filtered">filtered</a></td>
+<td>filtered</td>
+<td>依据表条件过滤行占比</td>
+</tr>
+<tr>
+<td><a href="#explain_extra">Extra</a></td>
+<td>无</td>
+<td>其他信息</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p><span id="explain_id">id</span></p>
+<p><code>SELECT</code>的标识符。这是查询中的<code>SELECT</code>的序号。如果当前行引用了其他行的联合结果，则该值为空。举个例子，当table列显示&lt;unionM,N&gt;时，表示该行引用了id值为M和N的行的联合结果，这个时候id列的值就会为空。</p>
+<p>如下sql：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPLAIN</span> <span class="keyword">SELECT</span> *<span class="keyword">FROM</span>(<span class="keyword">SELECT</span> <span class="number">2</span> <span class="keyword">UNION</span> ALL <span class="keyword">SELECT</span> <span class="number">3</span> )t;</span><br></pre></td></tr></table></figure>
+<p>执行结果：</p>
 </li>
 </ol>
 <ol start="2">
-<li><p>泛型类的定义和使用。</p>
-<p>以最常用的<code>Arraylist</code>为例，我们看下它的定义和使用。当我实例化时在<code>&lt;&gt;</code>中传入的类型为<code>Integer</code>时，集合中就无法再放入其他类型的元素了，从集合中取得元素时也不用再强转。（注意：泛型不支持基本类型，但是我们可以使用它的包装类型）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt;</span>&#123;&#125;</span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line">ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">2l</span>);<span class="comment">//编译错误,无法插入Long类型</span></span><br><span class="line">Integer integer=list.get(<span class="number">0</span>);<span class="comment">//能够直接确定取得的是Integer类型</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>泛型方法。</p>
-<ul>
-<li><p>声明方法和泛型类相似。</p>
-</li>
-<li><p>作用域仅限于声明的方法内。</p>
-</li>
-<li><p>静态方法，非静态方法，构造方法都可以使用。</p>
-</li>
-<li><p>类型参数区段必须出现在方法返回类型之前。</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 泛型构造方法格式</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> t</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> &lt;T&gt; Generics(T t) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 非静态泛型方法格式</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> t</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">getNonStatic</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 静态泛型方法格式</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> t</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">voTid <span class="title">getStatic</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类型限定。关键字<code>extends</code>,限制传入的类型参数必须为指定的类型或其子类型。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 单个类型限定</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> t</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &lt;V&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;V extends Integer&gt; <span class="function"><span class="keyword">void</span> <span class="title">singleBondedType</span><span class="params">(V t)</span> </span>&#123;</span><br><span class="line">    System.out.println(t.intValue());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 多个类型限定，需要同时满足条件。</span></span><br><span class="line"><span class="comment"> * 类型限定声明中类需要声明在接口前面</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> t</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &lt;V&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;V extends Integer &amp; Comparator&gt; <span class="function"><span class="keyword">void</span> <span class="title">multipleBondedType</span><span class="params">(V t)</span> </span>&#123;</span><br><span class="line">    System.out.println(t.intValue());</span><br><span class="line">    System.out.println(t.compare(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通配符（Wildcards）</p>
-<ul>
-<li><p>向上有界通配符（Upper Bounded Wildcards）</p>
-</li>
-<li><p>无界通配符（Unbounded Wildcards）</p>
-</li>
-<li><p>向下有界通配符（Lower Bounded Wildcards）</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 上有界通配符</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> list</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">upperBoundedWildcards</span><span class="params">(List&lt;? extends String&gt; list)</span></span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 无界通配符</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> list</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">unboundedWildcards</span><span class="params">(List&lt;?&gt; list)</span></span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 下有界通配符</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> list</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">lowerBoundedWildcards</span><span class="params">(List&lt;? <span class="keyword">super</span> Integer&gt; list)</span></span>&#123;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ps: 你可以用通配符指定一个上界，也可以指定一个下界，但不能同时指定。</p>
-</blockquote>
+<li><p><span id="explain_select_type">select_type</span></p>
+<p>SELECT的类型，下表中展示了所有可能的值及其含义。</p>
 </li>
 </ol>
-<h4 id="泛型的限制"><a href="#泛型的限制" class="headerlink" title="泛型的限制"></a>泛型的限制</h4><ol>
-<li><p>不接受基本类型当作参数。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>JSON 名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIMPLE</td>
+<td>无</td>
+<td>简单的SELECT(没有使用UNION或者子查询)</td>
+</tr>
+<tr>
+<td>PRIMARY</td>
+<td>无</td>
+<td>最外层的查询</td>
+</tr>
+<tr>
+<td>UNION</td>
+<td>无</td>
+<td>在一个UNION中第二或后面的SELECT语句</td>
+</tr>
+<tr>
+<td>DEPENDENT UNION</td>
+<td>dependent (true)</td>
+<td>在一个UNION中第二或后面的SELECT语句，并且依赖于外层查询</td>
+</tr>
+<tr>
+<td>UNION RESULT</td>
+<td>union_result</td>
+<td>UNION的结果</td>
+</tr>
+<tr>
+<td>SUBQUERY</td>
+<td>无</td>
+<td>子查询中的第一个SELECT</td>
+</tr>
+<tr>
+<td>DEPENDENT SUBQUERY</td>
+<td>dependent (true)</td>
+<td>子查询中的第一个SELECT，并且依赖于外层查询</td>
+</tr>
+<tr>
+<td>DERIVED</td>
+<td>无</td>
+<td>派生表（Derived table）</td>
+</tr>
+<tr>
+<td>MATERIALIZED</td>
+<td>materialized_from_subquery</td>
+<td>实例化子查询（Materialized subquery）</td>
+</tr>
+<tr>
+<td>UNCACHEABLE SUBQUERY</td>
+<td>cacheable (false)</td>
+<td>不能缓存结果的子查询，并且必须为外部查询的每一行重新计算结果</td>
+</tr>
+<tr>
+<td>UNCACHEABLE UNION</td>
+<td>cacheable (false)</td>
+<td>在一个UNCACHEABLE SUBQUERY的UNION语句中第二或后面的SELECT语句</td>
+</tr>
+</tbody>
+</table>
+<p>   <code>DEPENDENT</code>通常意味着使用了关联子查询。</p>
+<p>   <code>DEPENDENT SUBQUERY</code> 不同于 <code>UNCACHEABLE SUBQUERY</code> 。对于<code>DEPENDENT SUBQUERY</code>，对来自其外部上下文的每一组变量的不同值只重新计算一次子查询。对于<code>UNCACHEABLE SUBQUERY</code>，将会为外层上下文的每一行重新计算子查询。</p>
+<p>   对于非查询语句，<code>select_type</code>的值为语句类型。比如，对于一个<code>DELETE</code>语句，值为<code>DELETE</code></p>
+<ol start="3">
+<li><p><span id="explain_table">table</span></p>
+<p>当前行引用的表名，除此之外也可能是以下几种值：</p>
+<ul>
+<li><code>&lt;union*M*,*N*&gt;</code>：该行引用了<code>id</code>值为M和N的行的联合结果</li>
+<li><code>&lt;derived*N*&gt;</code>：该行引用了<code>id</code>值为N的行的派生表结果。比如引用了从子查询中生成的派生表。</li>
+<li><code>&lt;subquery*N*&gt;</code>：该行引用了id值为N的行的实例化子查询结果。</li>
+</ul>
 </li>
-<li><p>不能通过new泛型来实例化对象，但是可以通过反射来实现。</p>
+<li><p><span id="explain_partitions">partitions</span></p>
+<p>查询语句将从其中匹配记录的分区。对于非分区表，值为null。</p>
 </li>
-<li><p>不能声明静态泛型变量。</p>
+<li><p><span id="explain_type">type</span></p>
+<p>本列用于向我们展示MySQL使用哪种方式join当前表的。下面按照最好到最坏的顺序详细解析可能出现的值。</p>
+<ul>
+<li><p>system</p>
+<p>该表只有一行数据。这种类型是下面<code>const</code>类型的一种特例。</p>
 </li>
-<li><p>不能对泛型参数使用<code>cast</code>或<code>instanceof</code>。</p>
+<li><p>const</p>
+<p>该表最多只有一行数据被匹配，在查询开始时就会被读取。因为只有一行，所以这一行中列的值可以被优化器的其他部分视为常量。<code>const</code>表非常快，因为它们只需要读取一次。</p>
+<p>当把一个表的主键或唯一索引和一个常量值作比较时，<code>const</code>就会被使用。下面的语句中，t1就可以被作为一个<code>const</code>表。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span>  t1 <span class="keyword">WHERE</span> <span class="keyword">id</span>=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span>  t2 <span class="keyword">WHERE</span> unique_index_part1=<span class="number">1</span> <span class="keyword">and</span> unique_index_part1=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>不能创建泛型型数组，比如</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt;[] arrayOfLists = <span class="keyword">new</span> List&lt;Integer&gt;[<span class="number">2</span>];  <span class="comment">// 编译错误</span></span><br></pre></td></tr></table></figure>
+<li><p>eq_ref</p>
+<p>在与前一个表的每一行做联合时，只需要从该表中读取一行。除了<code>system</code>和<code>const</code>类型，这个是最好的join类型。当一个join语句中使用了主键或一个非空唯一索引的全部部分时，join类型就为<code>eq_ref</code>。</p>
+<p><code>eq_ref</code>可用于使用<code>=</code>运算符进行比较的索引列。比较值可以是一个常量，也可以是这个表之前读取的表中的列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table,other_table</span><br><span class="line">  <span class="keyword">WHERE</span> ref_table.key_column=other_table.column;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table,other_table</span><br><span class="line">  <span class="keyword">WHERE</span> ref_table.key_column_part1=other_table.column</span><br><span class="line">  <span class="keyword">AND</span> ref_table.key_column_part2=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>由于类型擦除机制，不能通过泛型重载方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//编译错误   </span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(Set&lt;String&gt; strSet)</span> </span>&#123; &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(Set&lt;Integer&gt; intSet)</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
+<li><p>ref</p>
+<p>在与前表的每个行组合中，从该表中读取具有匹配索引值的所有行。当join仅仅使用一个索引的左前缀，或者使用的索引不是一个主键，又或者不是唯一索引，<code>ref</code>就会被使用。如果使用的索引匹配的行数很少，这也不失为一个很好的join类型。</p>
+<p><code>eq_ref</code>可用于使用<code>=</code>或<code>&lt;=&gt;</code>运算符进行比较的索引列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table <span class="keyword">WHERE</span> key_column=expr;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table,other_table</span><br><span class="line">  <span class="keyword">WHERE</span> ref_table.key_column=other_table.column;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table,other_table</span><br><span class="line">  <span class="keyword">WHERE</span> ref_table.key_column_part1=other_table.column</span><br><span class="line">  <span class="keyword">AND</span> ref_table.key_column_part2=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>fulltext</p>
+<p>使用全文索引执行join</p>
+</li>
+<li><p>ref_or_null</p>
+<p>这个join类型和<code>ref</code>有点像，但是对于包含null值行，MySQL会做一个额外的查询。这种join类型优化最常用于解析子查询。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ref_table</span><br><span class="line">  <span class="keyword">WHERE</span> key_column=expr <span class="keyword">OR</span> key_column <span class="keyword">IS</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>index_merge</p>
+<p>这个join类型表示使用了索引合并优化。这个时候，<code>key</code>列显示了一系列使用到的索引，<code>key_len</code>显示了使用到的索引的最长键长。</p>
+</li>
+<li><p>unique_subquery</p>
+<p>在以下形式的某些<code>in</code>子查询中，这个join类型会替代<code>eq_ref</code>。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value IN (<span class="keyword">SELECT</span> primary_key <span class="keyword">FROM</span> single_table <span class="keyword">WHERE</span> some_expr)</span><br></pre></td></tr></table></figure>
+<p><code>unique_subquery</code>只是一个索引查找函数，它完全替代了子查询以提高效率。</p>
+</li>
+<li><p>index_subquery</p>
+<p>这个join类型和<code>unique_subquery</code>有些类似。它在子查询中替换，但在以下形式的子查询中适用于非唯一索引:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value IN (<span class="keyword">SELECT</span> key_column <span class="keyword">FROM</span> single_table <span class="keyword">WHERE</span> some_expr)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>range</p>
+<p>当使用一个索引去选择行时只检索了给定范围的行。<code>key</code>列显示了使用了哪个索引，<code>key_len</code>显示了使用到的索引的最长键长。当join类型为range时，<code>ref</code>列值为null。</p>
+<p><code>range</code>可用于使用 <code>=, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=, IS NULL, &lt;=&gt;,BETWEEN, LIKE, IN()</code> 运算符和一个常量进行比较的索引列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tbl_name</span><br><span class="line">  <span class="keyword">WHERE</span> key_column = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tbl_name</span><br><span class="line">  <span class="keyword">WHERE</span> key_column <span class="keyword">BETWEEN</span> <span class="number">10</span> <span class="keyword">and</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tbl_name</span><br><span class="line">  <span class="keyword">WHERE</span> key_column <span class="keyword">IN</span> (<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tbl_name</span><br><span class="line">  <span class="keyword">WHERE</span> key_part1 = <span class="number">10</span> <span class="keyword">AND</span> key_part2 <span class="keyword">IN</span> (<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>index</p>
+<p>这个join类型和ALL相似，区别是扫描了索引数。以下两种情况：</p>
+<ul>
+<li>当索引是一个覆盖索引，即包含(或覆盖)所有需要查询的字段的值，那么就只需要扫描索引树而无需回表，这个时候<code>Extra</code>列的值就会为<code>Using index</code>。<code>index</code>类型通常要比<code>ALL</code>类型要快，因为索引的长度通常要比表数据小得多。</li>
+<li>按索引顺序查找数据行来执行全表扫描，这个时候<code>Extra</code>列的值不会为<code>Using index</code>。</li>
+</ul>
+</li>
+<li><p>ALL</p>
+<p>为了和前表的每一行做组合而全表扫描。这种类型通常不太好，应当尽量避免。我们可以通过给表添加索引来避免这种情况。</p>
+</li>
+</ul>
+</li>
+<li><p><span id="explain_possible_keys">possible_keys</span></p>
+<p>这一列显示了可供MySQL选择用来查询使用的所有索引。需要注意的是其中的一些索引在实际运行时可能不会被使用。</p>
+<p>如果这一列为null，那就表示没有想关的索引。这个时候，可以检查where子句引用的列是否适合建立索引，通过建立合适的索引增强执行性能。索引建立完成后，可以再次执行<code>EXPLAIN</code>查看效果。</p>
+<p>想要知道表已经建立了哪些索引，可以通过<code>SHOW INDEX FROM table_name</code>查看。</p>
+</li>
+<li><p><span id="explain_key">key</span></p>
+<p>本列显示的MySQL实际选择使用的索引。如果本列为空，则表示MySQL没有找到索引来提升执行效率。</p>
+<p>这个索引可能不在<code>possible_keys</code>里。如果所有<code>possible_keys</code>索引都不适合查找行，但是其他有个索引包含了查询语句列举出的所有的列,就会发生这种情况，换句话说，这个索引覆盖了查询列。尽管它不能用来确定要检索哪些行，但扫描索引的效率比扫描数据行要高。</p>
+<p>在<code>InnoDB</code>引擎中，即使查询列包含主键，辅助索引也可能会覆盖所选列。因为<code>InnoDB</code>将主键值存储在每个辅助索引中。</p>
+<p>我们可以通过在查询语句中使用<code>FORCE INDEX</code>, <code>USE INDEX</code>,  <code>IGNORE INDEX</code> 来强制MySQL使用或忽略<code>possible_keys</code>列中列出的索引。</p>
+</li>
+<li><p><span id="explain_key_len">key_len</span></p>
+<p>本列显示了MySQL决定使用的索引的长度。本列的值能够使你确定MySQL实际使用了复合索引的多少部分。如果<code>key</code>列的值为null，那么<code>key_len</code>列的值也为null。</p>
+<p>由于索引存储格式，一个允许空值的列，索引长度要比非空列要长。</p>
+</li>
+<li><p><span id="explain_ref">ref</span></p>
+<p>本列显示了哪一列或那个常量被用来和<code>key</code>列中的索引做比较的从而从表中筛选行。</p>
+<p>如果值为<code>func</code>,表明使用了某些函数的结果。这个函数实际上可能是一个运算符，比如算术运算符 。</p>
+</li>
+<li><p><span id="explain_rows">rows</span><br> 本列表示MySQL认为执行查询语句时必须查找的行数。在InnoDB引擎中，这个数值是个预估值，可能会不精确。</p>
+</li>
+<li><p><span id="explain_filtered">filtered</span><br>本列表示将被表条件过滤的表行的估计百分比。最大值为100，这意味着没有对行进行筛选。  </p>
+</li>
+<li><p><span id="explain_extra">Extra</span>  </p>
+<p>本列展示了MySQL解析查询时一些额外的信息。下面介绍下本列可能出现的值。</p>
 </li>
 </ol>
+<ul>
+<li>const row not found </li>
+<li>Deleting all rows</li>
+<li>Distinct</li>
+<li>FirstMatch</li>
+<li>Full scan on NULL key</li>
+<li>Impossible HAVING</li>
+<li>Impossible WHERE</li>
+<li>Impossible WHERE noticed after reading const tables</li>
+<li>LooseScan</li>
+<li>No matching min/max row</li>
+<li>no matching row in const table</li>
+<li>No matching rows after partition pruning </li>
+<li>No tables used</li>
+<li>Not exists </li>
+<li>Plan isn’t ready yet </li>
+<li>Range checked for each record (index map: N)</li>
+<li>Recursive</li>
+<li>Select tables optimized away</li>
+<li>Start temporary, End temporary</li>
+<li>Using filesort</li>
+<li>Using index</li>
+<li>Using index condition</li>
+<li>Using index for group-by </li>
+<li>Using index for skip scan</li>
+<li>Using join buffer</li>
+<li>Using MRR</li>
+<li>Using sort_union(…), Using union(…), Using intersect(…)</li>
+<li>Using where</li>
+<li>Using where with pushed condition</li>
+<li>Zero limit </li>
+</ul>
 
       
     </div>
@@ -600,9 +794,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/泛型/" rel="tag"># 泛型</a>
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
           
-            <a href="/tags/Generics/" rel="tag"># Generics</a>
+            <a href="/tags/Explain/" rel="tag"># Explain</a>
+          
+            <a href="/tags/sql优化/" rel="tag"># sql优化</a>
           
         </div>
       
@@ -615,8 +811,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/05/Java新特性总结/" rel="next" title="Java 5，6，7，8，9，10新特性吐血总结">
-                <i class="fa fa-chevron-left"></i> Java 5，6，7，8，9，10新特性吐血总结
+              <a href="/2018/08/05/java泛型/" rel="next" title="java泛型（Generics）">
+                <i class="fa fa-chevron-left"></i> java泛型（Generics）
               </a>
             
           </div>
@@ -624,10 +820,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/08/MySQL优化-EXPLAIN/" rel="prev" title="MySQL优化-EXPLAIN（mysql版本8.0）">
-                MySQL优化-EXPLAIN（mysql版本8.0） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -682,17 +874,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -790,22 +973,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的好处"><span class="nav-number">1.</span> <span class="nav-text">泛型的好处</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的使用"><span class="nav-number">2.</span> <span class="nav-text">泛型的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的限制"><span class="nav-number">3.</span> <span class="nav-text">泛型的限制</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -958,9 +1125,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://IT18Monkey.github.io/2018/08/05/java泛型/';
-        this.page.identifier = '2018/08/05/java泛型/';
-        this.page.title = 'java泛型（Generics）';
+        this.page.url = 'http://IT18Monkey.github.io/2018/08/08/MySQL优化-EXPLAIN/';
+        this.page.identifier = '2018/08/08/MySQL优化-EXPLAIN/';
+        this.page.title = 'MySQL优化-EXPLAIN（mysql版本8.0）';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
