@@ -116,10 +116,12 @@
 <meta property="og:site_name" content="拔剑少年的博客">
 <meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  ​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Exp">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-08T13:40:55.067Z">
+<meta property="og:image" content="http://it18monkey.github.io/images/explain-1.png">
+<meta property="og:updated_time" content="2018-08-11T02:44:31.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL优化-EXPLAIN（mysql版本8.0）">
 <meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  ​    Explain命令是MySQL提供的内置命令，它的作用是向我们展示MySQL是如何执行sql语句的。SELECT, DELETE, INSERT, REPLACE,  UPDATE 语句都可以使用Exp">
+<meta name="twitter:image" content="http://it18monkey.github.io/images/explain-1.png">
 
 
 
@@ -388,12 +390,24 @@
                 
               
 
-              <time title="创建时间：2018-08-08 21:20:22 / 修改时间：21:40:55" itemprop="dateCreated datePublished" datetime="2018-08-08T21:20:22+08:00">2018-08-08</time>
+              <time title="创建时间：2018-08-08 21:20:22" itemprop="dateCreated datePublished" datetime="2018-08-08T21:20:22+08:00">2018-08-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-11 10:44:31" itemprop="dateModified" datetime="2018-08-11T10:44:31+08:00">2018-08-11</time>
               
             
           </span>
@@ -541,9 +555,8 @@
 <p>如下sql：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPLAIN</span> <span class="keyword">SELECT</span> *<span class="keyword">FROM</span>(<span class="keyword">SELECT</span> <span class="number">2</span> <span class="keyword">UNION</span> ALL <span class="keyword">SELECT</span> <span class="number">3</span> )t;</span><br></pre></td></tr></table></figure>
 <p>执行结果：</p>
+<p><img src="/images/explain-1.png" alt=""></p>
 </li>
-</ol>
-<ol start="2">
 <li><p><span id="explain_select_type">select_type</span></p>
 <p>SELECT的类型，下表中展示了所有可能的值及其含义。</p>
 </li>
