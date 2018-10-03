@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="拔剑少年的博客">
 <meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-08T13:28:37.492Z">
+<meta property="og:updated_time" content="2018-10-03T11:12:26.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 5，6，7，8，9，10新特性吐血总结">
 <meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
@@ -405,7 +405,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-08 21:28:37" itemprop="dateModified" datetime="2018-08-08T21:28:37+08:00">2018-08-08</time>
+                <time title="修改时间：2018-10-03 19:12:26" itemprop="dateModified" datetime="2018-10-03T19:12:26+08:00">2018-10-03</time>
               
             
           </span>
@@ -595,14 +595,27 @@
 <li>传统for循环中声明的索引变量。</li>
 <li>Try-with-resources 变量。​</li>
 </ul>
+<ol start="2">
+<li><code>Optional</code>类添加了新的方法<code>orElseThrow</code>。相比于已经存在的get方法，这个方法更推荐使用。</li>
+</ol>
 </li>
 </ol>
+<h4 id="java11"><a href="#java11" class="headerlink" title="java11"></a>java11</h4><ol>
+<li>支持<code>Unicode 10.0</code>,在jdk10中是8.0。</li>
+<li>标准化HTTP Client</li>
+<li>编译器线程的延迟分配。添加了新的命令<code>-XX:+UseDynamicNumberOfCompilerThreads</code>动态控制编译器线程的数量。</li>
+<li>新的垃圾收集器—ZGC。一种可伸缩的低延迟垃圾收集器(实验性)。</li>
+<li>Epsilon。一款新的实验性无操作垃圾收集器。Epsilon GC 只负责内存分配，不实现任何内存回收机制。这对于性能测试非常有用，可用于与其他GC对比成本和收益。</li>
+<li><p>Lambda参数的局部变量语法。java10中引入的var字段得到了增强，现在可以用在lambda表达式的声明中。如果lambda表达式的其中一个形式参数使用了var，那所有的参数都必须使用var。</p>
 <h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><ul>
 <li><a href="http://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html" target="_blank" rel="noopener">JDK Release Notes</a></li>
 <li><a href="http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html" target="_blank" rel="noopener">What’s New in JDK 8</a></li>
 <li><a href="https://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-C23AFD78-C777-460B-8ACE-58BE5EA681F6" target="_blank" rel="noopener">What’s New in JDK 9</a></li>
 <li><a href="http://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html#NewFeature" target="_blank" rel="noopener">JDK 10 Release Notes</a></li>
+<li><a href="https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html#NewFeature" target="_blank" rel="noopener">JDK 11 Release Notes</a></li>
 </ul>
+</li>
+</ol>
 
       
     </div>
@@ -848,7 +861,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java5"><span class="nav-number">1.</span> <span class="nav-text">java5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java6"><span class="nav-number">2.</span> <span class="nav-text">java6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java7"><span class="nav-number">3.</span> <span class="nav-text">java7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java8"><span class="nav-number">4.</span> <span class="nav-text">java8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java9"><span class="nav-number">5.</span> <span class="nav-text">java9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java10"><span class="nav-number">6.</span> <span class="nav-text">java10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考链接："><span class="nav-number">7.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java5"><span class="nav-number">1.</span> <span class="nav-text">java5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java6"><span class="nav-number">2.</span> <span class="nav-text">java6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java7"><span class="nav-number">3.</span> <span class="nav-text">java7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java8"><span class="nav-number">4.</span> <span class="nav-text">java8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java9"><span class="nav-number">5.</span> <span class="nav-text">java9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java10"><span class="nav-number">6.</span> <span class="nav-text">java10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java11"><span class="nav-number">7.</span> <span class="nav-text">java11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考链接："><span class="nav-number">8.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
             
 
           </div>
