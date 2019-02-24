@@ -109,6 +109,7 @@
 
 
   <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  什么是docker​    我们先来看下官方给出的说法  Package Software into Standardized Units for Development, Shipment and Deploy">
+<meta name="keywords" content="Docker,容器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅尝docker">
 <meta property="og:url" content="http://IT18Monkey.github.io/2019/02/17/浅尝docker/index.html">
@@ -118,7 +119,7 @@
 <meta property="og:image" content="http://it18monkey.github.io/images/container-vm.png">
 <meta property="og:image" content="http://it18monkey.github.io/images/docker-containerized.png">
 <meta property="og:image" content="http://it18monkey.github.io/images/docker-overlay.jpg">
-<meta property="og:updated_time" content="2019-02-17T12:46:11.638Z">
+<meta property="og:updated_time" content="2019-02-24T11:23:29.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅尝docker">
 <meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  什么是docker​    我们先来看下官方给出的说法  Package Software into Standardized Units for Development, Shipment and Deploy">
@@ -391,16 +392,46 @@
                 
               
 
-              <time title="创建时间：2019-02-17 20:41:26 / 修改时间：20:46:11" itemprop="dateCreated datePublished" datetime="2019-02-17T20:41:26+08:00">2019-02-17</time>
+              <time title="创建时间：2019-02-17 20:41:26" itemprop="dateCreated datePublished" datetime="2019-02-17T20:41:26+08:00">2019-02-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-24 19:23:29" itemprop="dateModified" datetime="2019-02-24T19:23:29+08:00">2019-02-24</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -451,15 +482,15 @@
 </blockquote>
 <p>​    docker是一个工具，一个用于软件打包的工具。那这个打包工具有什么特殊的呢，他能将运行一个应用所需要的所有东西，包括程序代码、系统工具、系统库和系统设置都打成一个包。这个包被称之为容器。</p>
 <p>我个人更倾向于将他描述为一个轻量级的虚拟机，因为它和虚拟机有着很多相似之处。</p>
-<h4 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h4><p><img src="/images/container-vm.png" alt="docker"></p>
-<p><img src="/images/docker-containerized.png" alt="docker"></p>
+<h4 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h4><p><img src="/images/container-vm.png" alt="虚拟机结构示意"></p>
+<p><img src="/images/docker-containerized.png" alt="Docker结构示意"></p>
 <p>上面两幅图展示了用虚拟机和docker运行程序的大体结构。让我们从下往上来对比。</p>
 <p>先看虚拟机这边：</p>
 <p>最底层是某种类型的基础设施，可能是一台个人电脑，或者是服务器。往上，是一个名为hypervisor的虚拟机管理程序，在这之上运行客户操作系统，也就是虚拟系统，每个虚拟系统都是相互隔离的。然后,所有的应用程序都运行在虚拟系统上。这里提下，虚拟机也是可以运行在操作系统上的。它分为两种，一种直接运行在系统硬件上，创建硬件全仿真实例，被称为裸机型。一种运行在传统操作系统上，同样创建的是硬件全仿真实例，被称为“托管（宿主）”型。</p>
 <p>再看docker这边：</p>
-<p>最底层和虚拟机一样，是某种类型的基础设施，可能是一台个人电脑，或者是服务器。往上是一个宿主操作系统，可能是windows或者是linux。也就是说docker不能直接运行在系统硬件上。目前来说支持linux和windows。在这个操作宿主操作系统上，我们安装一个docker，而我们的应用程序全部都运行在docker上，由docker来统一管理。每个应用程序都是相互隔离的。</p>
+<p>最底层和虚拟机一样，是某种类型的基础设施，可能是一台个人电脑，或者是服务器。往上是一个宿主操作系统，可能是windows或者是linux。也就是说docker不能直接运行在系统硬件上。目前来说支持linux和windows。在这个宿主操作系统上，我们安装一个docker，而我们的应用程序全部都运行在docker上，由docker来统一管理。每个应用程序都是相互隔离的。</p>
 <p>docker和虚拟机最大的区别就是他们的隔离级别不同。虚拟机是硬件级别的隔离，而docker只到进程级别。这一点也比较影响我们选择使用docker或是虚拟机。当然他们也不是互斥的，完全可以根据实际需要相互结合。</p>
-<h4 id="为什么要用docker"><a href="#为什么要用docker" class="headerlink" title="为什么要用docker"></a>为什么要用docker</h4><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p>
+<h4 id="为什么要用docker"><a href="#为什么要用docker" class="headerlink" title="为什么要用docker"></a>为什么要用docker</h4><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p>
 <ul>
 <li>更高效的利用系统资源</li>
 <li>更快速的启动时间</li>
@@ -469,18 +500,20 @@
 <li>更轻松的维护和扩展</li>
 </ul>
 <h4 id="docker基本概念"><a href="#docker基本概念" class="headerlink" title="docker基本概念"></a>docker基本概念</h4><ol>
-<li><p>镜像</p>
+<li>镜像</li>
+</ol>
 <p>我们都知道，操作系统分为内核和用户空间。对于 Linux 而言，内核启动后，会挂载 <code>root</code> 文件系统为其提供用户空间支持。而 Docker 镜像（Image），就相当于是一个 <code>root</code> 文件系统。比如官方镜像 <code>ubuntu:18.04</code> 就包含了完整的一套 Ubuntu 18.04 最小系统的 <code>root</code> 文件系统。</p>
 <p>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
-</li>
-<li><p>容器</p>
-<p>镜像（ Image ）和容器（ Container ）的关系，就像是面向对象程序设计中的<br>类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被<br>创建、启动、停止、删除、暂停等。</p>
-</li>
-<li><p>仓库</p>
-<p>镜像构建完成后，可以很容易的在当前宿主机上运行，但是，如果需要在其它服务<br>器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker<br>Registry 就是这样的服务。<br>一个 Docker Registry 中可以包含多个仓库（ Repository ）；每个仓库可以包<br>含多个标签（ Tag ）；每个标签对应一个镜像。<br>通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的<br>各个版本。我们可以通过 &lt;仓库名&gt;:&lt;标签&gt; 的格式来指定具体是这个软件哪个版<br>本的镜像。如果不给出标签，将以 latest 作为默认标签。</p>
-<p>Docker Registry 分为公开和私有两种，用户可以根据自己的需要搭配使用。</p>
-</li>
+<ol start="2">
+<li>容器</li>
 </ol>
+<p>镜像（ Image ）和容器（ Container ）的关系，就像是面向对象程序设计中的类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</p>
+<ol start="3">
+<li>仓库</li>
+</ol>
+<p>镜像构建完成后，可以很容易的在当前宿主机上运行，但是，如果需要在其它服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，DockerRegistry 就是这样的服务。一个 Docker Registry 中可以包含多个仓库（ Repository ）；每个仓库可以包含多个标签（ Tag ）；每个标签对应一个镜像。</p>
+<p>通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版本。我们可以通过 &lt;仓库名&gt;:&lt;标签&gt; 的格式来指定具体是这个软件哪个版本的镜像。如果不给出标签，将以 latest 作为默认标签。</p>
+<p>Docker Registry 分为公开和私有两种，用户可以根据自己的需要搭配使用。</p>
 <h4 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h4><p>镜像仓库操作</p>
 <ul>
 <li><p>docker login/logout</p>
@@ -516,40 +549,97 @@
 </ul>
 <p>容器操作</p>
 <ul>
-<li><p>docker ps<br>列出容器。格式：<code>docker ps [选项]</code>。 </p>
-</li>
+<li>docker ps<br> 列出容器。格式：<code>docker ps [选项]</code>。 </li>
 <li><p>docker inspect</p>
-<p>获取容器/镜像的元数据。<code>docker inspect [选项] 名称|ID</code>。</p>
+<p> 获取容器/镜像的元数据。<code>docker inspect [选项] 名称|ID</code>。</p>
 </li>
-<li><p>docker start/stop/restart<br>docker start :启动一个或多个已经被停止的容器。格式：<code>docker start [选项] 容器名[ [容器名...]]</code>。<br>docker stop :停止一个运行中的容器。<code>docker stop [选项] 容器名[ [容器名...]]</code>。<br>docker restart :重启容器。<code>docker restart [选项] 容器名[ [容器名...]]</code>。 </p>
+<li><p>docker start/stop/restart<br> docker start :启动一个或多个已经被停止的容器。格式：<code>docker start [选项] 容器名[ [容器名...]]</code>。<br> docker stop :停止一个运行中的容器。<code>docker stop [选项] 容器名[ [容器名...]]</code>。<br> docker restart :重启容器。<code>docker restart [选项] 容器名[ [容器名...]]</code>。 </p>
 </li>
-<li><p>docker kill<br>杀掉一个运行中的容器。<code>docker kill [选项] 容器名 [容器名...]</code>。 </p>
-</li>
-<li><p>docker rm<br>删除一个或多个容器。<code>docker rm [选项] 容器名[容器名...]</code></p>
-</li>
+<li>docker kill<br> 杀掉一个运行中的容器。<code>docker kill [选项] 容器名 [容器名...]</code>。 </li>
+<li>docker rm<br> 删除一个或多个容器。<code>docker rm [选项] 容器名[容器名...]</code></li>
 </ul>
 <h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><ol>
 <li><p>UnionFS与镜像分层存储</p>
-<p>所谓UnionFS就是把不同物理位置的目录合并mount到同一个目录中。UnionFS的一个最主要的应用是，把一张CD/DVD和一个硬盘目录给联合<br>mount在一起，然后，你就可以对这个只读的CD/DVD上的文件进行修改（当然，修改的文件存于硬盘上的目录里）。主要有以下几种实现：autfs,overlayfs。下图展示了overlayfs的基本结构</p>
-<p><img src="/images/docker-overlay.jpg" alt=""></p>
+<p>所谓UnionFS就是把不同物理位置的目录合并mount到同一个目录中。UnionFS的一个最主要的应用是，把一张CD/DVD和一个硬盘目录给联合mount在一起，然后，你就可以对这个只读的CD/DVD上的文件进行修改（当然，修改的文件存于硬盘上的目录里）。</p>
+<p>UnionFS主要有以下几种实现：aufs,overlayfs。下图展示了overlayfs的基本结构</p>
+<p><img src="/images/docker-overlay.jpg" alt="docker-overlay"></p>
 <p>其中lower dirA / lower dirB目录和upper dir目录为来自底层文件系统的不同目录，用户可以自行指定，内部包含了用户想要合并的文件和目录，merge dir目录为挂载点。当文件系统挂载后，在merge目录下将会同时看到来自各lower和upper目录下的内容，并且用户也无法（无需）感知这些文件分别哪些来自lower dir，哪些来自upper dir，用户看见的只是一个普通的文件系统根目录而已（lower dir可以有多个也可以只有一个）。</p>
 <p>虽然overlayfs将不同的各层目录进行合并，但是upper dir和各lower dir这几个不同的目录并不完全等价，存在层次关系。首先当upper dir和lower dir两个目录存在同名文件时，lower dir的文件将会被隐藏，用户只能看见来自upper dir的文件，然后各个lower dir也存在相同的层次关系，较上层屏蔽叫下层的同名文件。除此之外，如果存在同名的目录，那就继续合并（lower dir和upper dir合并到挂载点目录其实就是合并一个典型的例子）。</p>
-<p>各层目录中的upper dir是可读写的目录，当用户通过merge dir向时其中一个来自upper dir的文件写入数据时，那数据将直接写入upper dir下原来的文件中，删除文件也是同理；而各lower dir则是只读的，在overlayfs挂载后无论如何操作merge目录中对应来自lower dir的文件或目录，lower dir中的内容均不会发生任何的改变。既然lower dir是只读的，那当用户想要往来自lower层的文件添加或修改内容时，overlayfs首先会的拷贝一份lower dir中的文件副本到upper dir中，后续的写入和修改操作将会在upper dir下的copy-up的副本文件中进行，lower dir原文件被隐藏。</p>
-<p>以上就是overlayfs最基本的特性，简单的总结为以下3点：（1）上下层同名目录合并；（2）上下层同名文件覆盖；（3）lower dir文件写时拷贝。这三点对用户都是不感知的。</p>
+<p>各层目录中的upper dir是可读写的目录，当用户通过merge dir向时其中一个来自upper dir的文件写入数据时，那数据将直接写入upper dir下原来的文件中，删除文件也是同理；而各lower dir则是只读的，在overlayfs挂载后无论如何操作merge目录中对应来自lower dir的文件或目录，lower dir中的内容均不会发生任何的改变。当用户想要往来自lower层的文件添加或修改内容时，overlayfs首先会的拷贝一份lower dir中的文件副本到upper dir中，后续的写入和修改操作将会在upper dir下的copy-up的副本文件中进行，lower dir原文件被隐藏。</p>
+<p>以上就是overlayfs最基本的特性，简单的总结为以下3点：</p>
+<p>（1）上下层同名目录合并；</p>
+<p>（2）上下层同名文件覆盖；</p>
+<p>（3）lower dir文件写时拷贝。</p>
+<p>这三点对用户都是无感知的。</p>
 </li>
 <li><p>Linux Namespace</p>
-<p>为了提供更加精细的资源分配管理机制，Linux给出了namespace解决方法。Docker利用这一技术隔离容器的运行环境。</p>
+<p>为了提供更加精细的资源分配管理机制，Linux给出了namespace解决方法。Docker利用这一技术实现了容器运行环境的隔离。</p>
 <p>linux内核实现了六种namespace。列表如下：</p>
-<p>| namespace              | 引入的相关内核版本                   | 被隔离的全局系统资源                                         | 在容器语境下的隔离效果                                       |<br>| ———————- | ———————————— | ———————————————————— | ———————————————————— |<br>| <strong>Mount namespaces</strong>   | Linux 2.4.19                         | 文件系统挂接点                                               | 每个容器能看到不同的文件系统层次结构                         |<br>| <strong>UTS namespaces</strong>     | Linux 2.6.19                         | nodename 和 domainname                                       | 每个容器可以有自己的 hostname 和 domainame                   |<br>| <strong>IPC namespaces</strong>     | Linux 2.6.19                         | 特定的进程间通信资源，包括System V IPC和 POSIX message queues | 每个容器有其自己的 System V IPC 和 POSIX 消息队列文件系统，因此，只有在同一个 IPC namespace 的进程之间才能互相通信 |<br>| <strong>PID namespaces</strong>     | Linux 2.6.24                         | 进程 ID 数字空间 （process ID number space）                 | 每个 PID namespace 中的进程可以有其独立的 PID；  每个容器可以有其 PID 为 1 的root 进程；也使得容器可以在不同的 host 之间迁移，因为 namespace 中的进程 ID 和  host 无关了。这也使得容器中的每个进程有两个PID：容器中的 PID 和 host 上的 PID。 |<br>| <strong>Network namespaces</strong> | 始于Linux 2.6.24 完成于 Linux 2.6.29 | 网络相关的系统资源                                           | 每个容器用有其独立的网络设备，IP 地址，IP 路由表，/proc/net 目录，端口号等等。这也使得一个 host 上多个容器内的同一个应用都绑定到各自容器的 80 端口上。 |<br>| <strong>User namespaces</strong>    | 始于 Linux 2.6.23 完成于 Linux 3.8)  | 用户和组 ID 空间                                             | 在 user namespace 中的进程的用户和组 ID 可以和在 host 上不同； 每个 container 可以有不同的 user 和 group id；一个 host 上的非特权用户可以成为 user namespace 中的特权用户； |</p>
-<p>Linux namespace 的概念说简单也简单说复杂也复杂。简单来说，我们只要知道，处于某个 namespace<br>中的进程，能看到独立的它自己的隔离的某些特定系统资源；复杂来说，可以去看看 Linux 内核中实现 namespace 的原理。</p>
-</li>
-<li><p>Linux CGroups</p>
-<p>Docker 容器使用 linux namespace 来隔离其运行环境，使得容器中的进程看起来就像爱一个独立环境中运行一样。但是，光有运行环境隔离还不够，因为这些进程还是可以不受限制地使用系统资源，比如网络、磁盘、CPU以及内存等。关于其目的，一方面，是为了防止它占用了太多的资源而影响到其它进程；另一方面，在系统资源耗尽的时候，linux 内核会触发 OOM，这会让一些被杀掉的进程成了无辜的替死鬼。因此，为了让容器中的进程更加可控，Docker 使用 Linux cgroups 来限制容器中的进程允许使用的系统资源。 </p>
-<p>目前 docker 已经几乎支持了所有的 cgroups 资源，可以限制容器对包括 network，device，cpu 和 memory 在内的资源的使用</p>
-<p>我们可以通过给docker run 命令传参来控制分配容器的资源。Docker run 命令中 cgroups 相关命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">block IO:</span><br><span class="line">--blkio-weight value          Block IO (relative weight), between 10 and 1000</span><br><span class="line">--blkio-weight-device value   Block IO weight (relative device weight) (default [])</span><br><span class="line">--cgroup-parent string        Optional parent cgroup for the container</span><br><span class="line">CPU:</span><br><span class="line">--cpu-percent int             CPU percent (Windows only)</span><br><span class="line">--cpu-period int              Limit CPU CFS (Completely Fair Scheduler)period</span><br><span class="line">--cpu-quota int               Limit CPU CFS (Completely Fair Scheduler) quota</span><br><span class="line">-c, --cpu-shares int          CPU shares (relative weight)</span><br><span class="line">--cpuset-cpus string          CPUs in which to allow execution (0-3, 0,1)</span><br><span class="line">--cpuset-mems string          MEMs in which to allow execution (0-3, 0,1)</span><br><span class="line">Device:    </span><br><span class="line">--device		              Add a host device to the container</span><br><span class="line">--device-cgroup-rule		  Add a rule to the cgroup allowed devices list</span><br><span class="line">--device-read-bps			  Limit read rate (bytes per second) from a device</span><br><span class="line">--device-read-iops			  Limit read rate (IO per second) from a device</span><br><span class="line">--device-write-bps		 	  Limit write rate (bytes per second) to a device</span><br><span class="line">--device-write-iops			  Limit write rate (IO per second) to a device</span><br><span class="line">Memory:      </span><br><span class="line">--kernel-memory string        Kernel memory limit</span><br><span class="line">--memory , -m		          Memory limit</span><br><span class="line">--memory-reservation		  Memory soft limit</span><br><span class="line">--memory-swap				  Swap limit equal to memory plus swap: ‘-1’ to enable                     			 unlimited swap</span><br><span class="line">--memory-swappiness           Tune container memory swappiness (0 to 100)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>namespace</th>
+<th>引入的相关内核版本</th>
+<th>被隔离的全局系统资源</th>
+<th>在容器语境下的隔离效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mount namespaces</strong></td>
+<td>Linux 2.4.19</td>
+<td>文件系统挂接点</td>
+<td>每个容器能看到不同的文件系统层次结构</td>
+</tr>
+<tr>
+<td><strong>UTS namespaces</strong></td>
+<td>Linux 2.6.19</td>
+<td>主机名和域名</td>
+<td>每个容器可以有自己的 主机名和 域名</td>
+</tr>
+<tr>
+<td><strong>IPC namespaces</strong></td>
+<td>Linux 2.6.19</td>
+<td>特定的进程间通信资源，包括System V IPC和 POSIX message queues</td>
+<td>每个容器有其自己的 System V IPC 和 POSIX 消息队列文件系统，因此，只有在同一个 IPC namespace 的进程之间才能互相通信</td>
+</tr>
+<tr>
+<td><strong>PID namespaces</strong></td>
+<td>Linux 2.6.24</td>
+<td>进程 ID 数字空间</td>
+<td>每个 PID namespace 中的进程可以有其独立的 PID；  每个容器可以有其 PID 为 1 的root 进程；也使得容器可以在不同的宿主机之间迁移，因为 namespace 中的进程 ID 和 宿主机无关了。这也使得容器中的每个进程有两个PID：容器中的 PID 和宿主机上的 PID。</td>
+</tr>
+<tr>
+<td><strong>Network namespaces</strong></td>
+<td>始于Linux 2.6.24 完成于 Linux 2.6.29</td>
+<td>网络相关的系统资源</td>
+<td>每个容器用有其独立的网络设备，IP 地址，IP 路由表，/proc/net 目录，端口号等等。这也使得一个 宿主机 上多个容器内的同一个应用都绑定到各自容器的 80 端口上。</td>
+</tr>
+<tr>
+<td><strong>User namespaces</strong></td>
+<td>始于 Linux 2.6.23 完成于 Linux 3.8)</td>
+<td>用户和组 ID 空间</td>
+<td>在 user namespace 中的进程的用户和组 ID 可以和在宿主机上不同； 每个 container 可以有不同的 user 和 group id；一个 host 上的非特权用户可以成为 user namespace 中的特权用户；</td>
+</tr>
+</tbody>
+</table>
+<p>   Linux namespace 的概念说简单也简单说复杂也复杂。简单来说，我们只要知道，处于某个 namespace 中的进程，能看到独立的它自己的隔离的某些特定系统资源；复杂来说，可以去看看 Linux 内核中实现 namespace 的原理。</p>
+<ol start="3">
+<li><p>Linux CGroups</p>
+<p>Docker 容器使用 linux namespace 来隔离其运行环境，使得容器中的进程看起来就像爱一个独立环境中运行一样。但是，光有运行环境隔离还不够，因为这些进程还是可以不受限制地使用系统资源，比如网络、磁盘、CPU以及内存等。因此，为了让容器中的进程更加可控，Docker 使用 Linux cgroups 来限制容器中的进程允许使用的系统资源。 </p>
+<p>目前 docker 已经几乎支持了所有的 cgroups 资源，可以限制容器对包括 network，device，cpu 和memory 在内的资源的使用</p>
+<p>我们可以通过给docker run 命令传参来控制分配容器的资源。Docker run 命令中 cgroups 相关命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">block IO:</span><br><span class="line">--blkio-weight value          Block IO (relative weight), between 10 and 1000</span><br><span class="line">--blkio-weight-device value   Block IO weight (relative device weight) (default [])</span><br><span class="line">--cgroup-parent string        Optional parent cgroup for the container</span><br><span class="line">CPU:</span><br><span class="line">--cpu-percent int             CPU percent (Windows only)</span><br><span class="line">--cpu-period int              Limit CPU CFS (Completely Fair Scheduler)period</span><br><span class="line">--cpu-quota int               Limit CPU CFS (Completely Fair Scheduler) quota</span><br><span class="line">-c, --cpu-shares int          CPU shares (relative weight)</span><br><span class="line">--cpuset-cpus string          CPUs in which to allow execution (0-3, 0,1)</span><br><span class="line">--cpuset-mems string          MEMs in which to allow execution (0-3, 0,1)</span><br><span class="line">Device:    </span><br><span class="line">--device		                 Add a host device to the container</span><br><span class="line">--device-cgroup-rule		     Add a rule to the cgroup allowed devices list</span><br><span class="line">--device-read-bps			 Limit read rate (bytes per second) from a device</span><br><span class="line">--device-read-iops			 Limit read rate (IO per second) from a device</span><br><span class="line">--device-write-bps		 	 Limit write rate (bytes per second) to a device</span><br><span class="line">--device-write-iops			 Limit write rate (IO per second) to a device</span><br><span class="line">Memory:      </span><br><span class="line">--kernel-memory string        Kernel memory limit</span><br><span class="line">--memory , -m		         Memory limit</span><br><span class="line">--memory-reservation		     Memory soft limit</span><br><span class="line">--memory-swap			     Swap limit equal to memory plus swap: ‘-1’ to enable unlimited swap</span><br><span class="line">--memory-swappiness           Tune container memory swappiness (0 to 100)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="https://nickjanetakis.com/blog/comparing-virtual---machines-vs-docker-containers" target="_blank" rel="noopener">Comparing Virtual Machines vs Docker Containers</a></li>
+<li><a href="http://merrigrove.blogspot.com/2015/10/visualizing-docker-containers-and-images.html" target="_blank" rel="noopener">Visualizing Docker Containers and Images</a></li>
+<li><a href="http://www.cnblogs.com/sammyliu/p/5878973.html" target="_blank" rel="noopener">Docker 使用 Linux namespace 隔离容器的运行环境</a></li>
+<li><a href="https://docker_practice.gitee.io/" target="_blank" rel="noopener">Docker 从入门到实践</a></li>
+</ul>
 
       
     </div>
@@ -596,6 +686,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+            <a href="/tags/容器/" rel="tag"># 容器</a>
+          
+        </div>
       
 
       
@@ -715,7 +813,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -742,7 +842,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -787,7 +891,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是docker"><span class="nav-number">1.</span> <span class="nav-text">什么是docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker与虚拟机的区别"><span class="nav-number">2.</span> <span class="nav-text">docker与虚拟机的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要用docker"><span class="nav-number">3.</span> <span class="nav-text">为什么要用docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker基本概念"><span class="nav-number">4.</span> <span class="nav-text">docker基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker常用命令"><span class="nav-number">5.</span> <span class="nav-text">Docker常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术要点"><span class="nav-number">6.</span> <span class="nav-text">技术要点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是docker"><span class="nav-number">1.</span> <span class="nav-text">什么是docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker与虚拟机的区别"><span class="nav-number">2.</span> <span class="nav-text">docker与虚拟机的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要用docker"><span class="nav-number">3.</span> <span class="nav-text">为什么要用docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker基本概念"><span class="nav-number">4.</span> <span class="nav-text">docker基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker常用命令"><span class="nav-number">5.</span> <span class="nav-text">Docker常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术要点"><span class="nav-number">6.</span> <span class="nav-text">技术要点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
