@@ -108,25 +108,28 @@
 
 
 
-  <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
-<meta name="keywords" content="jdk,java新特性">
+  <meta name="description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  什么是docker​    我们先来看下官方给出的说法  Package Software into Standardized Units for Development, Shipment and Deploy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 5，6，7，8，9，10新特性吐血总结">
-<meta property="og:url" content="http://IT18Monkey.github.io/2018/08/05/Java新特性总结/index.html">
+<meta property="og:title" content="浅尝docker">
+<meta property="og:url" content="http://IT18Monkey.github.io/2019/02/17/浅尝docker/index.html">
 <meta property="og:site_name" content="拔剑少年的博客">
-<meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
+<meta property="og:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  什么是docker​    我们先来看下官方给出的说法  Package Software into Standardized Units for Development, Shipment and Deploy">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-13T11:06:28.546Z">
+<meta property="og:image" content="http://it18monkey.github.io/images/container-vm.png">
+<meta property="og:image" content="http://it18monkey.github.io/images/docker-containerized.png">
+<meta property="og:image" content="http://it18monkey.github.io/images/docker-overlay.jpg">
+<meta property="og:updated_time" content="2019-02-17T12:46:11.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 5，6，7，8，9，10新特性吐血总结">
-<meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  java5 泛型 (Generics) 1List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;Integer&amp;gt;();  增强循环（Enhanced for Loop） 123">
+<meta name="twitter:title" content="浅尝docker">
+<meta name="twitter:description" content="作者：拔剑少年 简书地址：https://www.jianshu.com/u/dad4d9675892博客地址：https://it18monkey.github.io转载请注明出处  什么是docker​    我们先来看下官方给出的说法  Package Software into Standardized Units for Development, Shipment and Deploy">
+<meta name="twitter:image" content="http://it18monkey.github.io/images/container-vm.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://IT18Monkey.github.io/2018/08/05/Java新特性总结/"/>
+  <link rel="canonical" href="http://IT18Monkey.github.io/2019/02/17/浅尝docker/"/>
 
 
 
@@ -136,7 +139,7 @@
   };
 </script>
 
-  <title>Java 5，6，7，8，9，10新特性吐血总结 | 拔剑少年的博客</title>
+  <title>浅尝docker | 拔剑少年的博客</title>
   
 
 
@@ -346,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2018/08/05/Java新特性总结/">
+    <link itemprop="mainEntityOfPage" href="http://IT18Monkey.github.io/2019/02/17/浅尝docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="拔剑少年">
@@ -363,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 5，6，7，8，9，10新特性吐血总结
+          <h1 class="post-title" itemprop="name headline">浅尝docker
               
             
           </h1>
@@ -388,46 +391,16 @@
                 
               
 
-              <time title="创建时间：2018-08-05 14:31:23" itemprop="dateCreated datePublished" datetime="2018-08-05T14:31:23+08:00">2018-08-05</time>
+              <time title="创建时间：2019-02-17 20:41:26 / 修改时间：20:46:11" itemprop="dateCreated datePublished" datetime="2019-02-17T20:41:26+08:00">2019-02-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-01-13 19:06:28" itemprop="dateModified" datetime="2019-01-13T19:06:28+08:00">2019-01-13</time>
               
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java基础/" itemprop="url" rel="index"><span itemprop="name">java基础</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -437,10 +410,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/05/Java新特性总结/#comments" itemprop="discussionUrl">
+                <a href="/2019/02/17/浅尝docker/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/05/Java新特性总结/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/02/17/浅尝docker/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -472,148 +445,109 @@
 <p>作者：拔剑少年</p>
 <p>简书地址：<a href="https://www.jianshu.com/u/dad4d9675892" target="_blank" rel="noopener">https://www.jianshu.com/u/dad4d9675892</a><br>博客地址：<a href="https://it18monkey.github.io">https://it18monkey.github.io</a><br>转载请注明出处</p>
 </blockquote>
-<h4 id="java5"><a href="#java5" class="headerlink" title="java5"></a>java5</h4><ol>
-<li><p>泛型 (Generics)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增强循环（Enhanced for Loop）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] array = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i : array) &#123;</span><br><span class="line">   System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>自动封箱拆箱(Autoboxing/Unboxing )。八大基本类型和它们的包装类能够自动的相互转换。</p>
-</li>
-<li><p>枚举(Typesafe Enums)。</p>
-<p>ps:枚举是一种实现线程安全的单例模式的好方式。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> TestEnum&#123;</span><br><span class="line">       one,</span><br><span class="line">       two;</span><br><span class="line">       TestEnum() &#123;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可变参数 (Varargs)</p>
-<p>语法：<code>(type... arguments)</code></p>
-<p>可变参数本质仍然是用一个数组存储参数，只是java隐藏了这一过程。需要注意的是如果一个方法声明中含有可变参数，那必须放在最后一个位置。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 可变参数测试</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testVarargs</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">     <span class="comment">//本质就是个数组</span></span><br><span class="line">     System.out.println(args[<span class="number">1</span>]);</span><br><span class="line">     <span class="keyword">for</span> (String arg : args) &#123;</span><br><span class="line">         System.out.println(arg);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>静态导入（Static Import）。通过import类来使用类里的静态变量或方法（直接通过名字，不需要加上<code>类名.</code>）,简化了代码的书写。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单个导入</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Math.PI;</span><br><span class="line"><span class="comment">//批量导入</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Math.*;</span><br></pre></td></tr></table></figure>
-<p>ps:过去的版本中只能通过继承类或实现接口才能使用。</p>
-</li>
-<li><p>注解（Annotations）。关键字<code>@interface</code>。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注释注解的注解又叫做元注解</span></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotations &#123;</span><br><span class="line">    <span class="comment">//注解内可以添加方法，也可以不添加</span></span><br><span class="line">    <span class="comment">//注解方法的返回值只能是基本类型，String，Class类,枚举,注解,可以有默认值。</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">id</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">String <span class="title">name</span><span class="params">()</span> <span class="keyword">default</span> "whh"</span>;</span><br><span class="line">    <span class="function">Class <span class="title">classType</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">TestEnum <span class="title">enumType</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新的线程模型和并发库（<code>java.util.concurrent</code>)。</p>
-</li>
-</ol>
-<h4 id="java6"><a href="#java6" class="headerlink" title="java6"></a>java6</h4><ol>
-<li>集合框架增强。</li>
-</ol>
+<h4 id="什么是docker"><a href="#什么是docker" class="headerlink" title="什么是docker"></a>什么是docker</h4><p>​    我们先来看下官方给出的说法</p>
+<blockquote>
+<p>Package Software into Standardized Units for Development, Shipment and Deployment</p>
+</blockquote>
+<p>​    docker是一个工具，一个用于软件打包的工具。那这个打包工具有什么特殊的呢，他能将运行一个应用所需要的所有东西，包括程序代码、系统工具、系统库和系统设置都打成一个包。这个包被称之为容器。</p>
+<p>我个人更倾向于将他描述为一个轻量级的虚拟机，因为它和虚拟机有着很多相似之处。</p>
+<h4 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h4><p><img src="/images/container-vm.png" alt="docker"></p>
+<p><img src="/images/docker-containerized.png" alt="docker"></p>
+<p>上面两幅图展示了用虚拟机和docker运行程序的大体结构。让我们从下往上来对比。</p>
+<p>先看虚拟机这边：</p>
+<p>最底层是某种类型的基础设施，可能是一台个人电脑，或者是服务器。往上，是一个名为hypervisor的虚拟机管理程序，在这之上运行客户操作系统，也就是虚拟系统，每个虚拟系统都是相互隔离的。然后,所有的应用程序都运行在虚拟系统上。这里提下，虚拟机也是可以运行在操作系统上的。它分为两种，一种直接运行在系统硬件上，创建硬件全仿真实例，被称为裸机型。一种运行在传统操作系统上，同样创建的是硬件全仿真实例，被称为“托管（宿主）”型。</p>
+<p>再看docker这边：</p>
+<p>最底层和虚拟机一样，是某种类型的基础设施，可能是一台个人电脑，或者是服务器。往上是一个宿主操作系统，可能是windows或者是linux。也就是说docker不能直接运行在系统硬件上。目前来说支持linux和windows。在这个操作宿主操作系统上，我们安装一个docker，而我们的应用程序全部都运行在docker上，由docker来统一管理。每个应用程序都是相互隔离的。</p>
+<p>docker和虚拟机最大的区别就是他们的隔离级别不同。虚拟机是硬件级别的隔离，而docker只到进程级别。这一点也比较影响我们选择使用docker或是虚拟机。当然他们也不是互斥的，完全可以根据实际需要相互结合。</p>
+<h4 id="为什么要用docker"><a href="#为什么要用docker" class="headerlink" title="为什么要用docker"></a>为什么要用docker</h4><p>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</p>
 <ul>
-<li>为了更好的支持双向访问集合。添加了许多新的类和接口。</li>
-<li><p>新的数组拷贝方法。<code>Arrays.copyOf</code>和<code>Arrays.copyOfRange</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下为添加的新接口和类</span></span><br><span class="line">Deque,BlockingDeque,NavigableSet,NavigableMap,ConcurrentNavigableMap，ArrayDeque， ConcurrentSkipListSet ,ConcurrentSkipListMap,ConcurrentSkipListMap ,AbstractMap.SimpleEntry ,AbstractMap.SimpleImmutableEntry</span><br></pre></td></tr></table></figure>
-</li>
+<li>更高效的利用系统资源</li>
+<li>更快速的启动时间</li>
+<li>一致的运行环境</li>
+<li>持续交付和部署</li>
+<li>更轻松的迁移</li>
+<li>更轻松的维护和扩展</li>
 </ul>
-<ol start="2">
-<li>Scripting. 可以让其他语言在java平台上运行。 java6包含了一个基于Mozilla Rhino实现的javascript脚本引擎。</li>
-<li><p>支持JDBC4.0规范。</p>
-<h4 id="java7"><a href="#java7" class="headerlink" title="java7"></a>java7</h4></li>
-<li><p>二进制前缀<code>0b</code>或者<code>0B</code>。整型（byte, short, int, long）可以直接用二进制表示。    </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二进制字面值前缀0b 或0B</span></span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0b010</span>;<span class="comment">//10进制值为2</span></span><br><span class="line">  <span class="keyword">int</span> j = <span class="number">0B010</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="docker基本概念"><a href="#docker基本概念" class="headerlink" title="docker基本概念"></a>docker基本概念</h4><ol>
+<li><p>镜像</p>
+<p>我们都知道，操作系统分为内核和用户空间。对于 Linux 而言，内核启动后，会挂载 <code>root</code> 文件系统为其提供用户空间支持。而 Docker 镜像（Image），就相当于是一个 <code>root</code> 文件系统。比如官方镜像 <code>ubuntu:18.04</code> 就包含了完整的一套 Ubuntu 18.04 最小系统的 <code>root</code> 文件系统。</p>
+<p>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
 </li>
-<li><p>字面常量数字的下划线。用下划线连接整数提升其可读性，自身无含义，不可用在数字的起始和末尾。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数字间的下划线不影响实际值</span></span><br><span class="line">   <span class="keyword">int</span> k = <span class="number">1_1</span>;<span class="comment">//值为11</span></span><br></pre></td></tr></table></figure>
+<li><p>容器</p>
+<p>镜像（ Image ）和容器（ Container ）的关系，就像是面向对象程序设计中的<br>类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被<br>创建、启动、停止、删除、暂停等。</p>
 </li>
-<li><p>switch 支持String类型。</p>
-</li>
-<li><p>泛型实例化类型自动推断。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, List&lt;String&gt;&gt; myMap = <span class="keyword">new</span> HashMap&lt;String, List&lt;String&gt;&gt;();    <span class="comment">// 之前</span></span><br><span class="line">Map&lt;String, List&lt;String&gt;&gt; myMap = <span class="keyword">new</span> HashMap&lt;&gt;();        <span class="comment">// 现在</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>try-with-resources语句。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment">   * 声明在try括号中的对象称为资源，在方法执行完毕后会被自动关闭,相对与之前必须在finally关闭资源，这一特性大大提高了代码的简洁性。</span></span><br><span class="line"><span class="comment">   * 所有实现java.lang.AutoCloseable接口的类都作为资源被自动关闭。</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="keyword">try</span> (BufferedReader reader=<span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">"d:1.txt"</span>)))&#123;</span><br><span class="line">    <span class="keyword">return</span> reader.readLine();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>单个catch中捕获多个异常类型（用<code>|</code> 分割）并通过改进的类型检查重新抛出异常。</p>
+<li><p>仓库</p>
+<p>镜像构建完成后，可以很容易的在当前宿主机上运行，但是，如果需要在其它服务<br>器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker<br>Registry 就是这样的服务。<br>一个 Docker Registry 中可以包含多个仓库（ Repository ）；每个仓库可以包<br>含多个标签（ Tag ）；每个标签对应一个镜像。<br>通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的<br>各个版本。我们可以通过 &lt;仓库名&gt;:&lt;标签&gt; 的格式来指定具体是这个软件哪个版<br>本的镜像。如果不给出标签，将以 latest 作为默认标签。</p>
+<p>Docker Registry 分为公开和私有两种，用户可以根据自己的需要搭配使用。</p>
 </li>
 </ol>
-<h4 id="java8"><a href="#java8" class="headerlink" title="java8"></a>java8</h4><ol>
-<li>lambada表达式(Lambda Expressions)。Lambda允许把函数作为一个方法的参数（函数作为参数传递进方法中)。</li>
-<li>方法引用（Method references）。方法引用提供了非常有用的语法，可以直接引用已有Java类或对象（实例）的方法或构造器。与lambda联合使用，可以使语言的构造更紧凑简洁，减少冗余代码。</li>
-<li>默认方法（Default methods）。默认方法允许将新功能添加到库的接口中，并确保兼容实现老版本接口的旧有代码。</li>
-<li>重复注解（Repeating Annotations）。重复注解提供了在同一声明或类型中多次应用相同注解类型的能力。</li>
-<li>类型注解（Type Annotation）。在任何地方都能使用注解，而不是在声明的地方。</li>
-<li>类型推断增强。</li>
-<li>方法参数反射（Method Parameter Reflection）。</li>
-<li>Stream API 。新添加的Stream API（java.util.stream） 把真正的函数式编程风格引入到Java中。Stream API集成到了Collections API里。</li>
-<li>HashMap改进，在键值哈希冲突时能有更好表现。</li>
-<li>Date Time API。加强对日期和时间的处理。</li>
-<li>java.util 包下的改进，提供了几个实用的工具类。<ul>
-<li>并行数组排序。</li>
-<li>标准的Base64编解码。</li>
-<li>支持无符号运算。</li>
-</ul>
-</li>
-<li>java.util.concurrent 包下增加了新的类和方法。<ul>
-<li><code>java.util.concurrent.ConcurrentHashMap</code> 类添加了新的方法以支持新的StreamApi和lambada表达式。</li>
-<li><code>java.util.concurrent.atomic</code> 包下新增了类以支持可伸缩可更新的变量。</li>
-<li><code>java.util.concurrent.ForkJoinPool</code>类新增了方法以支持 common pool。</li>
-<li>新增了<code>java.util.concurrent.locks.StampedLock</code>类，为控制读/写访问提供了一个基于性能的锁，且有三种模式可供选择。</li>
-</ul>
-</li>
-<li>HotSpot<ul>
-<li>删除了 永久代（PermGen）.</li>
-<li>方法调用的字节码指令支持默认方法。</li>
-</ul>
-</li>
-</ol>
-<h4 id="java9"><a href="#java9" class="headerlink" title="java9"></a>java9</h4><ol>
-<li>java模块系统 （Java Platform Module System）。</li>
-<li>新的版本号格式。<code>$MAJOR.$MINOR.$SECURITY.$PATCH</code></li>
-<li>java shell，交互式命令行控制台。</li>
-<li>在<code>private instance methods</code>方法上可以使用<code>@SafeVarargs</code>注解。</li>
-<li>diamond语法与匿名内部类结合使用。</li>
-<li>下划线<code>_</code>不能单独作为变量名使用。</li>
-<li>支持私有接口方法(您可以使用diamond语法与匿名内部类结合使用)。</li>
-<li>Javadoc<ul>
-<li>简化Doclet API。</li>
-<li>支持生成HTML5格式。</li>
-<li>加入了搜索框,使用这个搜索框可以查询程序元素、标记的单词和文档中的短语。</li>
-<li>支持新的模块系统。</li>
-</ul>
-</li>
-<li>JVM<ul>
-<li>增强了<code>Garbage-First(G1)</code>并用它替代<code>Parallel GC</code>成为默认的垃圾收集器。</li>
-<li>统一了JVM 日志，为所有组件引入了同一个日志系统。</li>
-<li>删除了JDK 8中弃用的GC组合。（DefNew + CMS，ParNew + SerialOld，Incremental CMS）。</li>
-</ul>
-</li>
-<li>properties文件支持<code>UTF-8</code>编码,之前只支持<code>ISO-8859-1</code>。</li>
-<li>支持<code>Unicode 8.0</code>，在JDK8中是<code>Unicode 6.2</code>。</li>
-</ol>
-<h4 id="java10"><a href="#java10" class="headerlink" title="java10"></a>java10</h4><ol>
-<li><p>局部变量类型推断（Local-Variable Type Inference）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//之前的代码格式</span></span><br><span class="line">URL url = <span class="keyword">new</span> URL(<span class="string">"http://www.oracle.com/"</span>); </span><br><span class="line">URLConnection conn = url.openConnection(); </span><br><span class="line">Reader reader = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">    <span class="keyword">new</span> InputStreamReader(conn.getInputStream()))</span><br><span class="line"><span class="comment">//java10中用var来声明变量</span></span><br><span class="line">var url = <span class="keyword">new</span> URL(<span class="string">"http://www.oracle.com/"</span>); </span><br><span class="line">var conn = url.openConnection(); </span><br><span class="line">var reader = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">    <span class="keyword">new</span> InputStreamReader(conn.getInputStream()));</span><br></pre></td></tr></table></figure>
-<p><code>var</code>是一个保留类型名称，而不是关键字。所以之前使用<code>var</code>作为变量、方法名、包名的都没问题，但是如果作为类或接口名，那么这个类和接口就必须重命名了。</p>
-<p><code>var</code>的使用场景主要有以下四种：</p>
+<h4 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h4><p>镜像仓库操作</p>
 <ul>
-<li>本地变量初始化。</li>
-<li>增强for循环中。</li>
-<li>传统for循环中声明的索引变量。</li>
-<li>Try-with-resources 变量。​</li>
-</ul>
-<ol start="2">
-<li><code>Optional</code>类添加了新的方法<code>orElseThrow</code>。相比于已经存在的get方法，这个方法更推荐使用。</li>
-</ol>
+<li><p>docker login/logout</p>
+<p>登陆/登出到一个Docker镜像仓库，如果未指定镜像仓库地址，默认为官方仓库 Docker Hub。</p>
+<p>格式：<code>docker login [选项][SERVER] ,docker logout [选项][SERVER]</code>。</p>
 </li>
-</ol>
-<h4 id="java11"><a href="#java11" class="headerlink" title="java11"></a>java11</h4><ol>
-<li>支持<code>Unicode 10.0</code>,在jdk10中是8.0。</li>
-<li>标准化HTTP Client</li>
-<li>编译器线程的延迟分配。添加了新的命令<code>-XX:+UseDynamicNumberOfCompilerThreads</code>动态控制编译器线程的数量。</li>
-<li>新的垃圾收集器—ZGC。一种可伸缩的低延迟垃圾收集器(实验性)。</li>
-<li>Epsilon。一款新的实验性无操作垃圾收集器。Epsilon GC 只负责内存分配，不实现任何内存回收机制。这对于性能测试非常有用，可用于与其他GC对比成本和收益。</li>
-<li><p>Lambda参数的局部变量语法。java10中引入的var字段得到了增强，现在可以用在lambda表达式的声明中。如果lambda表达式的其中一个形式参数使用了var，那所有的参数都必须使用var。</p>
-<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><ul>
-<li><a href="http://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html" target="_blank" rel="noopener">JDK Release Notes</a></li>
-<li><a href="http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html" target="_blank" rel="noopener">What’s New in JDK 8</a></li>
-<li><a href="https://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-C23AFD78-C777-460B-8ACE-58BE5EA681F6" target="_blank" rel="noopener">What’s New in JDK 9</a></li>
-<li><a href="http://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html#NewFeature" target="_blank" rel="noopener">JDK 10 Release Notes</a></li>
-<li><a href="https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html#NewFeature" target="_blank" rel="noopener">JDK 11 Release Notes</a></li>
+<li><p>docker pull </p>
+<p>从Docker Registry获取镜像。格式：<code>docker pull [选项][Docker Registry 地址[:端口号]/]仓库名[:标签]</code>。</p>
+</li>
+<li><p>docker push</p>
+<p>将本地的镜像上传到镜像仓库,要先登陆到镜像仓库。格式：<code>docker push [选项] 仓库名[:标签]</code>。</p>
+</li>
+<li><p>docker search</p>
+<p>从Docker Hub查找镜像。格式<code>docker search [选项] 关键字</code>。</p>
+</li>
 </ul>
+<p>镜像操作</p>
+<ul>
+<li><p>docker images</p>
+<p>列出本地镜像。格式：<code>docker images [选项][仓库名[:标签]]</code>。</p>
+</li>
+<li><p>docker run </p>
+<p>创建一个新的容器并运行一个命令。格式：<code>docker run [选项] 镜像名[命令</code>][参数]。</p>
+</li>
+<li><p>docker rmi </p>
+<p>删除本地一个或多少镜像。格式：<code>docker rmi [选项] 镜像名[镜像名...]</code>。</p>
+</li>
+<li><p>docker build</p>
+<p>使用 Dockerfile 创建镜像。格式：<code>docker build [选项] 路径 | URL | -</code>。</p>
+</li>
+<li><p>docker history<br>查看指定镜像的创建历史。格式：<code>docker history [选项] 镜像名</code>。</p>
+</li>
+</ul>
+<p>容器操作</p>
+<ul>
+<li><p>docker ps<br>列出容器。格式：<code>docker ps [选项]</code>。 </p>
+</li>
+<li><p>docker inspect</p>
+<p>获取容器/镜像的元数据。<code>docker inspect [选项] 名称|ID</code>。</p>
+</li>
+<li><p>docker start/stop/restart<br>docker start :启动一个或多个已经被停止的容器。格式：<code>docker start [选项] 容器名[ [容器名...]]</code>。<br>docker stop :停止一个运行中的容器。<code>docker stop [选项] 容器名[ [容器名...]]</code>。<br>docker restart :重启容器。<code>docker restart [选项] 容器名[ [容器名...]]</code>。 </p>
+</li>
+<li><p>docker kill<br>杀掉一个运行中的容器。<code>docker kill [选项] 容器名 [容器名...]</code>。 </p>
+</li>
+<li><p>docker rm<br>删除一个或多个容器。<code>docker rm [选项] 容器名[容器名...]</code></p>
+</li>
+</ul>
+<h4 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h4><ol>
+<li><p>UnionFS与镜像分层存储</p>
+<p>所谓UnionFS就是把不同物理位置的目录合并mount到同一个目录中。UnionFS的一个最主要的应用是，把一张CD/DVD和一个硬盘目录给联合<br>mount在一起，然后，你就可以对这个只读的CD/DVD上的文件进行修改（当然，修改的文件存于硬盘上的目录里）。主要有以下几种实现：autfs,overlayfs。下图展示了overlayfs的基本结构</p>
+<p><img src="/images/docker-overlay.jpg" alt=""></p>
+<p>其中lower dirA / lower dirB目录和upper dir目录为来自底层文件系统的不同目录，用户可以自行指定，内部包含了用户想要合并的文件和目录，merge dir目录为挂载点。当文件系统挂载后，在merge目录下将会同时看到来自各lower和upper目录下的内容，并且用户也无法（无需）感知这些文件分别哪些来自lower dir，哪些来自upper dir，用户看见的只是一个普通的文件系统根目录而已（lower dir可以有多个也可以只有一个）。</p>
+<p>虽然overlayfs将不同的各层目录进行合并，但是upper dir和各lower dir这几个不同的目录并不完全等价，存在层次关系。首先当upper dir和lower dir两个目录存在同名文件时，lower dir的文件将会被隐藏，用户只能看见来自upper dir的文件，然后各个lower dir也存在相同的层次关系，较上层屏蔽叫下层的同名文件。除此之外，如果存在同名的目录，那就继续合并（lower dir和upper dir合并到挂载点目录其实就是合并一个典型的例子）。</p>
+<p>各层目录中的upper dir是可读写的目录，当用户通过merge dir向时其中一个来自upper dir的文件写入数据时，那数据将直接写入upper dir下原来的文件中，删除文件也是同理；而各lower dir则是只读的，在overlayfs挂载后无论如何操作merge目录中对应来自lower dir的文件或目录，lower dir中的内容均不会发生任何的改变。既然lower dir是只读的，那当用户想要往来自lower层的文件添加或修改内容时，overlayfs首先会的拷贝一份lower dir中的文件副本到upper dir中，后续的写入和修改操作将会在upper dir下的copy-up的副本文件中进行，lower dir原文件被隐藏。</p>
+<p>以上就是overlayfs最基本的特性，简单的总结为以下3点：（1）上下层同名目录合并；（2）上下层同名文件覆盖；（3）lower dir文件写时拷贝。这三点对用户都是不感知的。</p>
+</li>
+<li><p>Linux Namespace</p>
+<p>为了提供更加精细的资源分配管理机制，Linux给出了namespace解决方法。Docker利用这一技术隔离容器的运行环境。</p>
+<p>linux内核实现了六种namespace。列表如下：</p>
+<p>| namespace              | 引入的相关内核版本                   | 被隔离的全局系统资源                                         | 在容器语境下的隔离效果                                       |<br>| ———————- | ———————————— | ———————————————————— | ———————————————————— |<br>| <strong>Mount namespaces</strong>   | Linux 2.4.19                         | 文件系统挂接点                                               | 每个容器能看到不同的文件系统层次结构                         |<br>| <strong>UTS namespaces</strong>     | Linux 2.6.19                         | nodename 和 domainname                                       | 每个容器可以有自己的 hostname 和 domainame                   |<br>| <strong>IPC namespaces</strong>     | Linux 2.6.19                         | 特定的进程间通信资源，包括System V IPC和 POSIX message queues | 每个容器有其自己的 System V IPC 和 POSIX 消息队列文件系统，因此，只有在同一个 IPC namespace 的进程之间才能互相通信 |<br>| <strong>PID namespaces</strong>     | Linux 2.6.24                         | 进程 ID 数字空间 （process ID number space）                 | 每个 PID namespace 中的进程可以有其独立的 PID；  每个容器可以有其 PID 为 1 的root 进程；也使得容器可以在不同的 host 之间迁移，因为 namespace 中的进程 ID 和  host 无关了。这也使得容器中的每个进程有两个PID：容器中的 PID 和 host 上的 PID。 |<br>| <strong>Network namespaces</strong> | 始于Linux 2.6.24 完成于 Linux 2.6.29 | 网络相关的系统资源                                           | 每个容器用有其独立的网络设备，IP 地址，IP 路由表，/proc/net 目录，端口号等等。这也使得一个 host 上多个容器内的同一个应用都绑定到各自容器的 80 端口上。 |<br>| <strong>User namespaces</strong>    | 始于 Linux 2.6.23 完成于 Linux 3.8)  | 用户和组 ID 空间                                             | 在 user namespace 中的进程的用户和组 ID 可以和在 host 上不同； 每个 container 可以有不同的 user 和 group id；一个 host 上的非特权用户可以成为 user namespace 中的特权用户； |</p>
+<p>Linux namespace 的概念说简单也简单说复杂也复杂。简单来说，我们只要知道，处于某个 namespace<br>中的进程，能看到独立的它自己的隔离的某些特定系统资源；复杂来说，可以去看看 Linux 内核中实现 namespace 的原理。</p>
+</li>
+<li><p>Linux CGroups</p>
+<p>Docker 容器使用 linux namespace 来隔离其运行环境，使得容器中的进程看起来就像爱一个独立环境中运行一样。但是，光有运行环境隔离还不够，因为这些进程还是可以不受限制地使用系统资源，比如网络、磁盘、CPU以及内存等。关于其目的，一方面，是为了防止它占用了太多的资源而影响到其它进程；另一方面，在系统资源耗尽的时候，linux 内核会触发 OOM，这会让一些被杀掉的进程成了无辜的替死鬼。因此，为了让容器中的进程更加可控，Docker 使用 Linux cgroups 来限制容器中的进程允许使用的系统资源。 </p>
+<p>目前 docker 已经几乎支持了所有的 cgroups 资源，可以限制容器对包括 network，device，cpu 和 memory 在内的资源的使用</p>
+<p>我们可以通过给docker run 命令传参来控制分配容器的资源。Docker run 命令中 cgroups 相关命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">block IO:</span><br><span class="line">--blkio-weight value          Block IO (relative weight), between 10 and 1000</span><br><span class="line">--blkio-weight-device value   Block IO weight (relative device weight) (default [])</span><br><span class="line">--cgroup-parent string        Optional parent cgroup for the container</span><br><span class="line">CPU:</span><br><span class="line">--cpu-percent int             CPU percent (Windows only)</span><br><span class="line">--cpu-period int              Limit CPU CFS (Completely Fair Scheduler)period</span><br><span class="line">--cpu-quota int               Limit CPU CFS (Completely Fair Scheduler) quota</span><br><span class="line">-c, --cpu-shares int          CPU shares (relative weight)</span><br><span class="line">--cpuset-cpus string          CPUs in which to allow execution (0-3, 0,1)</span><br><span class="line">--cpuset-mems string          MEMs in which to allow execution (0-3, 0,1)</span><br><span class="line">Device:    </span><br><span class="line">--device		              Add a host device to the container</span><br><span class="line">--device-cgroup-rule		  Add a rule to the cgroup allowed devices list</span><br><span class="line">--device-read-bps			  Limit read rate (bytes per second) from a device</span><br><span class="line">--device-read-iops			  Limit read rate (IO per second) from a device</span><br><span class="line">--device-write-bps		 	  Limit write rate (bytes per second) to a device</span><br><span class="line">--device-write-iops			  Limit write rate (IO per second) to a device</span><br><span class="line">Memory:      </span><br><span class="line">--kernel-memory string        Kernel memory limit</span><br><span class="line">--memory , -m		          Memory limit</span><br><span class="line">--memory-reservation		  Memory soft limit</span><br><span class="line">--memory-swap				  Swap limit equal to memory plus swap: ‘-1’ to enable                     			 unlimited swap</span><br><span class="line">--memory-swappiness           Tune container memory swappiness (0 to 100)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -663,14 +597,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/jdk/" rel="tag"># jdk</a>
-          
-            <a href="/tags/java新特性/" rel="tag"># java新特性</a>
-          
-        </div>
-      
 
       
       
@@ -680,15 +606,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/08/MySQL优化-EXPLAIN/" rel="next" title="MySQL优化-EXPLAIN（mysql版本8.0）">
+                <i class="fa fa-chevron-left"></i> MySQL优化-EXPLAIN（mysql版本8.0）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/05/java泛型/" rel="prev" title="java泛型（Generics）">
-                java泛型（Generics） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -861,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java5"><span class="nav-number">1.</span> <span class="nav-text">java5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java6"><span class="nav-number">2.</span> <span class="nav-text">java6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java7"><span class="nav-number">3.</span> <span class="nav-text">java7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java8"><span class="nav-number">4.</span> <span class="nav-text">java8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java9"><span class="nav-number">5.</span> <span class="nav-text">java9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java10"><span class="nav-number">6.</span> <span class="nav-text">java10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java11"><span class="nav-number">7.</span> <span class="nav-text">java11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考链接："><span class="nav-number">8.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是docker"><span class="nav-number">1.</span> <span class="nav-text">什么是docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker与虚拟机的区别"><span class="nav-number">2.</span> <span class="nav-text">docker与虚拟机的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要用docker"><span class="nav-number">3.</span> <span class="nav-text">为什么要用docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker基本概念"><span class="nav-number">4.</span> <span class="nav-text">docker基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker常用命令"><span class="nav-number">5.</span> <span class="nav-text">Docker常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术要点"><span class="nav-number">6.</span> <span class="nav-text">技术要点</span></a></li></ol></div>
             
 
           </div>
@@ -1019,9 +945,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://IT18Monkey.github.io/2018/08/05/Java新特性总结/';
-        this.page.identifier = '2018/08/05/Java新特性总结/';
-        this.page.title = 'Java 5，6，7，8，9，10新特性吐血总结';
+        this.page.url = 'http://IT18Monkey.github.io/2019/02/17/浅尝docker/';
+        this.page.identifier = '2019/02/17/浅尝docker/';
+        this.page.title = '浅尝docker';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
